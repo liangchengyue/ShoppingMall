@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 @Transactional
@@ -17,5 +18,9 @@ public class TestServiceImpl implements TestService {
 
     public void addTest(Test test) {
         testDao.addTest(test);
+    }
+
+    public List<Test> getList() {
+        return testDao.getList();
     }
 }

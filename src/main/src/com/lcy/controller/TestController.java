@@ -28,4 +28,10 @@ public class TestController {
         testService.addTest(test);
         return "ok";
     }
+    @RequestMapping("/getList")
+    @ResponseBody
+    public String getList(){
+        System.out.println(testService.getList());
+        return "list";
+    }
 }
