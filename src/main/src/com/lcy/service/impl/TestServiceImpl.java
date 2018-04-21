@@ -1,7 +1,6 @@
 package com.lcy.service.impl;
 
 import com.lcy.dao.TestDao;
-import com.lcy.dao.impl.TestDaoImpl;
 import com.lcy.pojo.Test;
 import com.lcy.service.TestService;
 import org.springframework.stereotype.Service;
