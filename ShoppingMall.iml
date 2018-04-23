@@ -9,6 +9,12 @@
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/src/main/resources" />
+          <root url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/classes" />
+          <root url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/lib" />
+          <root url="file://$MODULE_DIR$/src/main/src" />
+        </sourceRoots>
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
@@ -32,6 +38,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/classes" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/lib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/common" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />

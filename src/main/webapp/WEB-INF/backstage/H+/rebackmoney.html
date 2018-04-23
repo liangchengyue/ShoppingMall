@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        $(function () {
+            //搜索
+            $("#serach").click(function () {
+                var key = $("#key").val();
+                if (key.trim() == '') {
+                    $("tbody").find("tr").attr('style', 'disple:black');
+                    return;
+                }
+                var table = $("tbody").find('tr');
+                var html = "";
+                $(table).each(function () {
+                    var a = $(this).find('td[lang="a"]').html();
+                    if (a.search(key) != -1) {
+                        html = html + "<tr>";
+                        html = html + $(this).html();
+                        html = html + "</tr>";
+                    }
+                    else {
+                        html = html + '<tr style="display:none">';
+                        html = html + $(this).html();
+                        html = html + "</tr>";
+                    }
+                });
+                $("tbody").html(html);
+            });
+            //添加
+            $("#add").click(function () {
+                var name = $('div[lang="name"]').find("input").val();
+                if (name.trim() == "") {
+                    alert('请输入姓名');
+                    return;
+                }                                                                                                                                                                                  
+                var money = $('div[lang="money"]').find("input").val();
+                if (money.trim() == "") {
+                    alert('请输入还款金额');
+                }
+                var state = $('div[lang="state"]').find('select').val();
+                var n = $("tbody").find("tr").length + 1;
+                var html = '<tr>';
+                html = html + '<td>' + n + '</td>';
+                html = html + '<td lang= "a">' + name + '</td>';
+                html = html + '<td>￥' + money + '</td>';
+                html = html + '<td>' + Format(new Date(), 'yyyy年MM月dd日') + '</td>';
+                html = html + '<td>' + state+ '</td>';
+                html = html + '<td> <a href="javascript:;">修改</a>|<a href="javascript:;">删除</a> </td>';
+                html = html + '</tr>';
+                $('tbody').append(html);
+                $('#myModal').modal('hide');
+            })
+        })
+    </script>
+</head>
+<body style="margin:20px">
+    <div class="row">
+        <div class="col-md-10">
+            <h3>还款管理</h3>
+        </div>
+        <div class="col-md-1">
+            <div class="form-group">
+                <button type="button" data-toggle="modal" data-target="#myModal" class="btn">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row col-md-11">
+        <div class="input-group">
+            <input type="text" id="key" class="form-control"> <span class="input-group-btn">
+                <button type="button" id="serach" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>搜索
+                </button>
+            </span>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>学生姓名</th>
+                <th>还款金额（元）</th>
+                <th>还款时间</th>
+                <th>还款方式</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td lang="a">
+                    张三
+                </td>
+                <td>￥ 5000.00</td>
+                <td>2018年10月20日 12:17:28</td>
+                <td>银行卡</td>
+                <td>
+                    <a href="javascript:;">修改</a>|<a href="javascript:;">删除</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">添加还款记录</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group" lang="name">
+                                <label for="exampleInputName2">姓名：</label>
+                                <input type="text" class="form-control" id="exampleInputName2" placeholder="姓名">
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group" lang="money">
+                                <label for="exampleInputName2">还款金额（元）：</label>
+                                <input type="number" class="form-control" id="exampleInputName2" placeholder="贷款金额">
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group" lang="state">
+                                <label for="exampleInputName2">还款方式：</label>
+                                <select class="form-control">
+                                    <option value="银行卡">银行卡</option>
+                                    <option value="支付宝">支付宝</option>
+                                    <option value="微信">微信</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="add">保存</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div>
+    </div>
+</body>
+</html>
