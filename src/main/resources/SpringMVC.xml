@@ -10,4 +10,6 @@
         <property name="prefix" value="/WEB-INF/" />
         <property name="suffix" value=".jsp" />
     </bean>
+    <!-- 静态资源解析 包括 ：js、css、img、plugins.. -->
+    <mvc:resources location="/resource/" mapping="/resource/**" />
 </beans>
