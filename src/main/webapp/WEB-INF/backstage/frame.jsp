@@ -87,12 +87,31 @@
     <!--右侧部分开始-->
     <div id="page-wrapper" class="gray-bg dashbard-1">
         <div class="row border-bottom">
-            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0;float: left;display: block">
                 <div class="navbar-header">
                     <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
 
                 </div>
             </nav>
+
+            <div class="dropdown profile-element" style="float:right;margin-right: 50px;">
+                <%--<span><img alt="image" class="img-circle" src="img/贵州大学明德学院.png" width="60px" /></span>--%>
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs"><strong class="font-bold">admin</strong></span>
+                                    <span class="text-muted text-xs block">超级管理员<b class="caret"></b></span>
+                                </span>
+                </a>
+                <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                    <li>
+                        <a class="J_menuItem" href="center.html">个人资料</a>
+                    </li>
+                    <li>
+                        <a href="login.html">安全退出</a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
         <div class="row content-tabs">
             <button class="roll-nav roll-left J_tabLeft">
@@ -124,7 +143,6 @@
                     </li>
                 </ul>
             </div>
-            <a href="login.html" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
         </div>
         <div class="row J_mainContent" id="content-main">
             <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="index_v1.html?v=4.0" frameborder="0" data-id="index_v1.html" seamless></iframe>
