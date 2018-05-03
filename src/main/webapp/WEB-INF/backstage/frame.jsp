@@ -26,41 +26,12 @@
             <i class="fa fa-times-circle"></i>
         </div>
         <div class="sidebar-collapse">
+            <div class="logo" style="height: 100px; padding: 20px;">
+                <img src="" title="logo">
+            </div>
             <ul class="nav" id="side-menu">
-                <li class="nav-header">
-                    <div class="dropdown profile-element">
-                        <span><img alt="image" class="img-circle" src="img/贵州大学明德学院.png" width="60px" /></span>
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <span class="clear">
-                                    <span class="block m-t-xs"><strong class="font-bold">admin</strong></span>
-                                    <span class="text-muted text-xs block">超级管理员<b class="caret"></b></span>
-                                </span>
-                        </a>
-                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li>
-                                <a class="J_menuItem" href="center.html">个人资料</a>
-                            </li>
-                            <li>
-                                <a href="login.html">安全退出</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </li>
                 <li type="menu" lang="2">
-                    <a class="J_menuItem" href="archives.html">学生档案管理</a>
-                </li>
-                <li type="menu" lang="3">
-                    <a class="J_menuItem" href="moneyapply.html">贷款申请审批</a>
-                </li>
-                <li type="menu" lang="3">
-                    <a class="J_menuItem" href="rebackmoney.html">还款管理</a>
-                </li>
-                <li type="menu" lang="1">
-                    <a class="J_menuItem" href="apply.html">贷款申请</a>
-                </li>
-                <li type="menu" lang="1">
-                    <a class="J_menuItem" href="studentrebackmoney.html">学生还款管理</a>
+                    <a class="J_menuItem" href="archives.html"><i class="fa fa-table"></i>学生档案管理</a>
                 </li>
                 <li>
                     <a class="J_menuItem">
@@ -94,8 +65,9 @@
                 </div>
             </nav>
 
-            <div class="dropdown profile-element" style="float:right;margin-right: 50px;">
-                <%--<span><img alt="image" class="img-circle" src="img/贵州大学明德学院.png" width="60px" /></span>--%>
+            <div class="dropdown profile-element" style="float:right;margin-right: 30px;width: 140px;">
+
+                <span style="float: left;display: block;padding-right: 12px"><img alt="image" class="img-circle" src="../resource/image/head.jpg" width="50px" style="padding: 5px" /></span>
                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
                                     <span class="block m-t-xs"><strong class="font-bold">admin</strong></span>

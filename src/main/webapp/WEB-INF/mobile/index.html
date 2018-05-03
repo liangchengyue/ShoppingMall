@@ -11,6 +11,14 @@
     </script>
 </head>
 <body>
-	<h1>你好 </h1>
+	<div id="box"></div>
+	<script type="text/javascript" src="js/template.js" ></script>
+	<script>
+		window.onload=function(){
+			var data={"title":"你好"};
+			var html=template("Index/test",data);
+			document.getElementById("box").innerHTML=html;
+		}
+	</script>
 </body>
 </html>
